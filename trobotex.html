@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>T-RobotEx</title>
+  <!---<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon"> -->
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  </head>
+  <body>
+<label for="ticket">Ticket #</label>
+    <input id="ticket" type="text" name="Ticket#" placeholder="insert ticket number">
+
+<label id="exp" for="ticket">Expiry date</label>
+    <input type="text" name="exp" placeholder="Specify expiry date">
+
+<label id="url" for="url">URL</label>
+    <input id="inputLink" type="text" name="url" placeholder="insert URL">
+
+<label for="code">Code snippet</label>
+    <input id="code" type="text" name="url" placeholder="insert code snippet">
+
+    <button id="run";>Expecto patronum</button>
+  <script type="text/javascript" src="script.js"></script>
+
+  <h3>Output</h3>
+  <pre id="output">
+    /*************Extract src/cat/type ************/
+let fl_code=<span id="sendCode"></span>;
+
+let splitStr= fl_code.split(";");
+let fl_splitStr=splitStr[0].split("/");
+let srcStrSplit = fl_splitStr[5].split("src=");
+let srcId = srcStrSplit[1];
+console.log(srcId);
+
+let typeStrSplit = splitStr[1].split("type=");
+let typeValue = typeStrSplit[1];
+console.log(typeValue);
+
+let catStrSplit = splitStr[2].split("cat=");
+let catValue = catStrSplit[1];
+console.log(catValue);
+/*************End of extract src/cat/type ************/
+
+/***************fl_src**************/
+document.getElementById("tabs_customizations").click(); //go to Extensions tab
+document.getElementById("customizations_6_accordion").click(); //open fl_src
+
+function fl_inputCreate(){
+let items = document.querySelectorAll(".js-action-addbtn"); //all plusButtons
+let lastchild = items[items.length-2]; //last plubButton
+lastchild.click(); //create a new entry in the lookup table
+console.log(items);
+console.log(lastchild);
+};
+
+function fl_urlInsert(){
+let fl_input=document.querySelectorAll('[data-test="lookup_match_input"]'); //all inputs
+let fl_input_lastChild =fl_input[fl_input.length-1]; //last input
+console.log(fl_input);
+console.log(fl_input_lastChild);
+fl_input_lastChild.value=<span id="readyRegex"></span>; //fill out input field
+};
+
+function fl_srcInsert(){
+let fl_output=document.querySelectorAll('[data-test="output_value_input"]'); //all outputs
+let fl_output_lastChild =fl_output[fl_output.length-1]; //last output
+console.log(fl_output);
+console.log(fl_output_lastChild);
+fl_output_lastChild.value=srcId; //fill out output field
+};
+
+function fl_typeInsert(){
+    let fl_output=document.querySelectorAll('[data-test="output_value_input"]'); //all outputs
+    let fl_output_lastChild =fl_output[fl_output.length-1]; //last output
+    console.log(fl_output);
+    console.log(fl_output_lastChild);
+    fl_output_lastChild.value=typeValue; //fill out output field
+};
+
+function fl_catInsert(){
+    let fl_output=document.querySelectorAll('[data-test="output_value_input"]'); //all outputs
+    let fl_output_lastChild =fl_output[fl_output.length-1]; //last output
+    console.log(fl_output);
+    console.log(fl_output_lastChild);
+    fl_output_lastChild.value=catValue; //fill out output field
+};
+
+function fl_noteInsert(){
+    let fl_note=document.querySelectorAll('[name*="comment"]'); //all inputs
+    let fl_note_lastChild =fl_note[fl_note.length-1]; //last input
+    console.log(fl_note);
+    console.log(fl_note_lastChild);
+    fl_note_lastChild.value=<span id="sendTicket"></span>+" "+expDate;
+    };
+
+fl_inputCreate();
+fl_urlInsert()
+fl_srcInsert();
+fl_noteInsert();
+/***************End of fl_src**************/
+
+/***************fl_type**************/
+document.getElementById("tabs_customizations").click(); //go to Extensions tab
+document.getElementById("customizations_7_accordion").click(); //open fl_type
+
+fl_inputCreate();
+fl_urlInsert()
+fl_typeInsert();
+fl_noteInsert();
+/***************End of fl_type**************/
+
+/***************fl_cat**************/
+document.getElementById("tabs_customizations").click(); //go to Extensions tab
+document.getElementById("customizations_8_accordion").click(); //open fl_type
+fl_inputCreate();
+fl_urlInsert()
+fl_catInsert()
+fl_noteInsert();
+/***************End of fl_cat**************/
+
+
+  </pre>
+  </body>
+</html>

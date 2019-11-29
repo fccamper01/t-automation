@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    background-color: #F8F8F8;
+    font-family: "Trebuchet MS", Helvetica;
+    
+}
+
+header {
+    height:10%;
+    padding:1%;
+    background-color: #06A2AE;
+    color:#fff;
+    font-weight: bold;
+    display:flex;
+}
+
+li {
+    display: inline-block;
+    list-style:none;
+    cursor:pointer;
+    padding-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#logo{
+    text-shadow: 2px 2px #828caf;
+    font-size: 1.2em;
+    margin-left:-40%;
+    padding-left: 0;
+}
+
+#right-menu {
+    margin-left: auto;
+}
+
+
+#inputUrls {
+    display: block;
+    width: 90vw;
+    height: 5vh;
+    border: none;
+    margin: 1%;
+    box-shadow: 2px 2px 4px #afb4c6;
+}
+
+
+button {
+    background-color: #06A2AE;
+    color: #fff !important;
+    margin: 1%;
+    padding: 1%;
+    border: none;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+#output {
+    background-color: #fff;
+    width: 80vw;
+}
+
+#allPages {
+    background-color: #F87B19;
+}
+
+#reset {
+    background-color: #FF6868;
+}
+
+#singlePage {
+    background-color:  #62A042;
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+}

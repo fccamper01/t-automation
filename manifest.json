@@ -1,0 +1,25 @@
+  {
+    "manifest_version" : 2,
+
+    "name" : "TRobotEx Dev Tools",
+    "version" : "0.1",
+
+    "description" : "Tealiumik booster",
+    "author" : "AP",
+    "browser_action": {
+      "default_popup": "floodlight.html"
+  },
+
+  "permissions": [
+    "tabs",
+        "notifications",
+        "http://*/",
+        "https://*/"
+    ],
+
+    "icons": {
+     "128": "icon128.png" },
+
+    "devtools_page" : "devtools.html"
+}
+

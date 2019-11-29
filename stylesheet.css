@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    background-color: #fff;
+    font-family: "Trebuchet MS", Helvetica;
+    color:#66758c;
+    
+}
+header {
+    padding:0% 1%;
+    background-color: #fff;
+    color:#2196F3;
+    display:flex;
+    border-bottom: 2px solid rgb(248, 248, 248);
+}
+
+li {
+    display: inline-block;
+    list-style:none;
+    cursor:pointer;
+    padding-left: 15px;
+}
+
+li:hover {
+    color:rgb(10, 41, 100);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#logo{
+    margin-left:-40%;
+    padding-left: 0;
+}
+
+
+#right-menu {
+    margin-left: auto;
+}
+
+h2 {
+    text-align: right;
+    padding: 0 1%;
+    background-color:#2196F3;
+    color: #fff;
+    width: 15%;
+}
+
+section {
+    margin: 1% 0.3%;
+}
+
+#startT{
+    margin-right:5%;
+}
+
+button, input {
+    background-color: #fff;
+    border: 1px solid #2196F3;
+    border-radius: 4px;
+    color:#2196F3;
+    padding: 0.5%;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    background: #2196F3;
+    color: #fff;
+}
+
+#reset:focus {
+    background: #d63d21;
+    color:#fff;
+}
+
+pre {
+    background-color: #1c203c;
+    color:rgb(255, 255, 255);
+}
+
+#readyRegex, #sendTicket, #expDate, #sendAdv, #notes, #sendCt, #sendCode {
+    color:yellow;
+    font-weight: bold;
+}

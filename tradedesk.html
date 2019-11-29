@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>T-RobotEx</title>
+  <!---<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon"> -->
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  </head>
+  <body>
+    <header>
+      <ul>
+            <li id="logo"><a href="#">TRobotEx</a></li>
+      </ul>
+      
+    <ul id="right-menu">
+
+        <li class="menu-column"><a href="tradedesk.html">TD</a></li>
+        <li><a href="floodlight.html">FL</a></li>
+        <li><a href="index-tregex.html">Regex</a></li>
+    </ul>
+  </header>
+
+  <section><span>Go to</span>
+    <button id="goToFl">FL</button>
+    <button id="goToTd">TD</button>
+    <button id="goToNtv">NTV</button>
+  </section>
+
+
+    <h2>TradeDesk</h2>
+
+    <label for="ticket">Ticket #</label>
+    <input id="ticket" type="text" name="Ticket#" placeholder="insert ticket number">
+
+<label for="ticket">Expiry date</label>
+    <input id="exp" type="date" name="exp" value="2019-12-31" placeholder="Specify expiry date">
+
+<label id="url" for="url">URL</label>
+    <input id="inputLink" type="text" name="url" placeholder="insert URL">
+<button>Single page</button>
+    <button>All pages</button>
+      <label for="code">Code snippet</label>
+    <input id="code" type="text" name="url" placeholder="insert code snippet">
+
+    <button id="run";>Expecto patronum</button>
+    <button id="save";>Auto Save</button>
+     <!---<button id="publish";>Auto Publish</button>
+    <button id="dev">Dev</button>
+    <button id="qa">QA</button>
+    <button id="prod">Prod</button>-->
+    <button id="reset">RESET</button>
+ 
+  <h3>Output</h3>
+  <pre id="output">
+
+
+/***************TradeDesk**************/
+function inputCreate(){
+  let items = document.querySelectorAll(".js-action-addbtn"); //all plusButtons
+  let lastchild = items[items.length-2]; //last plubButton
+  lastchild.click(); //create a new entry in the lookup table
+  console.log(items);
+  console.log(lastchild);
+  };
+
+  function urlInsert(){
+    let tag_input=document.querySelectorAll('[data-test="lookup_match_input"]'); //all inputs
+    let tag_input_lastChild =tag_input[tag_input.length-1]; //last input
+    console.log(tag_input);
+    console.log(tag_input_lastChild);
+    tag_input_lastChild.value=<span id="readyRegex"></span>; //fill out input field
+    };
+
+    function advInsert(){
+      let tag_output=document.querySelectorAll('[data-test="output_value_input"]'); //all outputs
+      let output_lastChild =tag_output[tag_output.length-1]; //last output
+      console.log(tag_output);
+      console.log(output_lastChild);
+      output_lastChild.value=<span id="sendAdv"></span>; //fill out output field
+      };
+      function noteInsert(){
+        let note=document.querySelectorAll('[name*="comment"]'); //all inputs
+        let note_lastChild =note[note.length-1]; //last input
+        console.log(note);
+        console.log(note_lastChild);
+        note_lastChild.value=<span id="notes"></span>;
+        };
+
+        function ctInsert(){
+          let tag_output=document.querySelectorAll('[data-test="output_value_input"]'); //all outputs
+          let output_lastChild =tag_output[tag_output.length-1]; //last output
+          console.log(tag_output);
+          console.log(output_lastChild);
+          output_lastChild.value=<span id="sendCt"></span>; //fill out output field
+          };
+
+
+document.getElementById("tabs_customizations").click(); //go to Extensions tab
+document.getElementById("customizations_1_accordion").click(); //open tr adv
+
+inputCreate();
+          urlInsert();
+          ctInsert();
+          noteInsert();
+
+document.getElementById("tabs_customizations").click(); //go to Extensions tab
+document.getElementById("customizations_2_accordion").click(); //open tr adv
+          
+          inputCreate();
+          urlInsert();
+          ctInsert();
+          noteInsert();
+
+/***************End of TradeDesk**************/
+  </pre>
+
+  <script type="text/javascript" src="tradedesk-script.js"></script>
+  <script type="text/javascript" src="global-script.js"></script>
+
+  </body>
+</html>
